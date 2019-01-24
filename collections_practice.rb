@@ -60,6 +60,7 @@ def merge_data(keys, data)
   hash_output = {}
 
   keys_array.each_with_index do |keys_hash, keys_index|
+    binding.pry
     hash_output = keys_hash.merge(data_array[keys_index])
   end
   hash_output
