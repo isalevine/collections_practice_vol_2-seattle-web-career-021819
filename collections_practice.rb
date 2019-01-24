@@ -58,15 +58,10 @@ def merge_data(keys, data)
   keys_array = keys
   data_array = data
   hash_output = {}
-  keys_array.each do |keys_hash|
-    data_array.each do |data_hash|
-      if data_hash.key?(keys_hash[:first_name])
-        keys_temp = keys_hash
-        array_temp = data_hash.values
-        data_temp = array_temp[0]
-        hash_output = keys_temp.merge(data_temp)
-      end
-    end
+
+  keys_array.each_with_index do |keys_hash, keys_index|
+    data_hash = data_array[keys_index]
+    hash_output = keys_hash.merge(data_hash)
   end
   hash_output
 end
