@@ -55,17 +55,13 @@ def count_elements(array)
 end
 
 def merge_data(keys, data)
-
   keys_array = keys
   data_array = data
   hash_output = {}
-  keys_array.each_with_index do |keys_hash, keys_index|
-
+  keys_array.each do |keys_hash|
     data_array.each do |data_hash_key, data_hash_value|
-
       if data_hash_key == keys_hash[:first_name]
-
-        hash_output = keys_array[keys_index].merge(data_hash_value)
+        hash_output = keys_hash.merge(data_hash_value)
       end
     end
   end
