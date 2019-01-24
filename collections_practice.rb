@@ -62,7 +62,8 @@ def merge_data(keys, data)
     data_array.each do |data_hash_key, data_hash_value|
       if data_hash_key == keys_hash[:first_name]
         hash_temp = keys_hash
-        hash_output = keys_hash.merge(data_hash_value)
+        data_temp = data_hash_value
+        hash_output = hash_temp.merge(data_temp)
       end
     end
   end
