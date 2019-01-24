@@ -55,11 +55,14 @@ def count_elements(array)
 end
 
 def merge_data(keys, data)
+  binding.pry
   keys_array = keys
   data_array = data
   hash_output = {}
   keys_array.each_with_index do |keys_hash, index|
+    binding.pry
     data_array.each do |data_hash_key, data_hash_value|
+      binding.pry
       if data_hash_key == keys_hash[:first_name]
         binding.pry
         hash_output = keys_array[index].merge(data_hash_value)
