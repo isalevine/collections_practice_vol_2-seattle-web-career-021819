@@ -1,3 +1,5 @@
+require "pry"
+
 def begins_with_r(array)
   answer = true
   array.each do |word|
@@ -53,12 +55,5 @@ def count_elements(array)
 end
 
 def merge_data(keys, data)
-  merger = []
-  keys.each_with_index do |keyhash, indexnum|
-    namecheck = keyhash[:first_name]
-    hash1data = data[indexnum]
-    hash2data = hash1data[namecheck]
-    output = keyhash.merge(hash2data)
-    merger << output
-  end
+  binding.pry
 end
