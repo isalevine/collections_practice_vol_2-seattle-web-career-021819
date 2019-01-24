@@ -65,5 +65,5 @@ def merge_data(keys, data)
       end
     end
   end
-  hash_output    
+  hash_output
 end
